@@ -1,4 +1,40 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.029 sec
+Tests run: 4, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.036 sec <<< FAILURE! - in TestSuite
+feature(com.czeczotka.bdd.runner.RunTest)  Time elapsed: 0.013 sec  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.czeczotka.bdd.runner.RunTest.feature(RunTest.java:39)
+Caused by: java.lang.NullPointerException: null
+	at java.util.Hashtable.put(Hashtable.java:460)
+	at java.util.Properties.setProperty(Properties.java:166)
+	at java.lang.System.setProperty(System.java:796)
+	at com.czeczotka.bdd.steps.Hook.openBrowser(Hook.java:15)
+	at com.czeczotka.bdd.steps.loginScript.openURL(loginScript.java:20)
+	at ✽.Given user launch browser(cucumber/login.feature:5)
+
+feature(com.czeczotka.bdd.runner.RunTest)  Time elapsed: 0.02 sec  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.czeczotka.bdd.runner.RunTest.feature(RunTest.java:39)
+Caused by: java.lang.NullPointerException: null
+	at java.util.Hashtable.put(Hashtable.java:460)
+	at java.util.Properties.setProperty(Properties.java:166)
+	at java.lang.System.setProperty(System.java:796)
+	at com.czeczotka.bdd.steps.Hook.openBrowser(Hook.java:15)
+	at com.czeczotka.bdd.steps.loginScript.openURL(loginScript.java:20)
+	at ✽.Given user launch browser(cucumber/loginScenarioOutline.feature:5)
+
+feature(com.czeczotka.bdd.runner.RunTest)  Time elapsed: 0.011 sec  <<< FAILURE!
+cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.czeczotka.bdd.runner.RunTest.feature(RunTest.java:39)
+Caused by: java.lang.NullPointerException: null
+	at java.util.Hashtable.put(Hashtable.java:460)
+	at java.util.Properties.setProperty(Properties.java:166)
+	at java.lang.System.setProperty(System.java:796)
+	at com.czeczotka.bdd.steps.Hook.openBrowser(Hook.java:15)
+	at com.czeczotka.bdd.steps.registration.getRegistrationPage(registration.java:24)
+	at ✽.Given Im on registration page(cucumber/registration.feature:5)
+

@@ -11,16 +11,27 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import org.junit.runner.RunWith; 
+import cucumber.api.junit.Cucumber; 
+
+
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		//dryRun=true,
         format = { "pretty", "html:target/cucumber", "json:target/cucumber/report.json", "junit:target/cucumber/junit.xml" },
         glue = "com.czeczotka.bdd.steps",
         //tags={"@smoketest"},
-        features= {"classpath:cucumber/example.feature","classpath:cucumber/registration.feature","classpath:cucumber/login.feature","classpath:cucumber/loginScenarioOutline.feature"}
+        features= {"classpath:cucumber/example.feature",
+        		   "classpath:cucumber/registration.feature",
+        		   "classpath:cucumber/login.feature",
+        		   "classpath:cucumber/loginScenarioOutline.feature"}
         
         //features = {"classpath:cucumber/registration.feature"}
-       //features = {"classpath:cucumber/registration.feature","classpath:cucumber/login.feature","classpath:cucumber/loginScenarioOutline.feature"}
+        
+        /*features = {"classpath:cucumber/registration.feature",
+        "classpath:cucumber/login.feature",
+        "classpath:cucumber/loginScenarioOutline.feature"}*/
 )
 public class RunTest {
 	

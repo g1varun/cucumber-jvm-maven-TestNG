@@ -5,9 +5,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import junit.framework.Assert;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;

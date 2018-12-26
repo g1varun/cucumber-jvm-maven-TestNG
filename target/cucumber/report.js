@@ -23,7 +23,7 @@ formatter.match({
   "location": "example.displayReports()"
 });
 formatter.result({
-  "duration": 92018054,
+  "duration": 120111661,
   "status": "passed"
 });
 formatter.scenario({
@@ -68,7 +68,7 @@ formatter.match({
   "location": "example.calculate(Integer\u003e)"
 });
 formatter.result({
-  "duration": 2059417,
+  "duration": 2125785,
   "status": "passed"
 });
 formatter.match({
@@ -81,7 +81,7 @@ formatter.match({
   "location": "example.checksum(int)"
 });
 formatter.result({
-  "duration": 1232413,
+  "duration": 1545873,
   "status": "passed"
 });
 formatter.scenario({
@@ -133,7 +133,7 @@ formatter.match({
   "location": "example.pricelistofItems(String,Integer\u003e)"
 });
 formatter.result({
-  "duration": 1335443,
+  "duration": 1581296,
   "status": "passed"
 });
 formatter.match({
@@ -158,7 +158,7 @@ formatter.match({
   "location": "example.userorder(int,String,int,String)"
 });
 formatter.result({
-  "duration": 208034,
+  "duration": 688407,
   "status": "passed"
 });
 formatter.match({
@@ -171,7 +171,7 @@ formatter.match({
   "location": "example.paymentDone(int)"
 });
 formatter.result({
-  "duration": 95135,
+  "duration": 228980,
   "status": "passed"
 });
 formatter.scenario({
@@ -235,7 +235,7 @@ formatter.match({
   "location": "example.userorder(OrderItem\u003e)"
 });
 formatter.result({
-  "duration": 12529004,
+  "duration": 18972425,
   "status": "passed"
 });
 formatter.match({
@@ -260,7 +260,7 @@ formatter.match({
   "location": "example.purchasePower(int,String,int,String)"
 });
 formatter.result({
-  "duration": 411331,
+  "duration": 282165,
   "status": "passed"
 });
 formatter.match({
@@ -273,7 +273,7 @@ formatter.match({
   "location": "example.cost(int)"
 });
 formatter.result({
-  "duration": 1605848,
+  "duration": 3733840,
   "status": "passed"
 });
 formatter.uri("cucumber/login.feature");
@@ -340,23 +340,22 @@ formatter.match({
   "location": "loginScript.openURL()"
 });
 formatter.result({
-  "duration": 20375216817,
+  "duration": 1258255686,
   "status": "passed"
 });
 formatter.match({
   "location": "loginScript.launchapplication()"
 });
 formatter.result({
-  "duration": 17301797065,
+  "duration": 3478292875,
   "status": "passed"
 });
 formatter.match({
   "location": "loginScript.login(userlist\u003e)"
 });
 formatter.result({
-  "duration": 53044941621,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"input[name\u003d\u0027login\u0027]\"}\n  (Session info: chrome\u003d57.0.2987.133)\n  (Driver info: chromedriver\u003d2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform\u003dWindows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 20.09 seconds\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00272.53.0\u0027, revision: \u002735ae25b1534ae328c771e0856c93e187490ca824\u0027, time: \u00272016-03-15 10:43:46\u0027\nSystem info: host: \u0027WN7X64-9KQH622\u0027, ip: \u0027192.168.1.100\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir\u003dC:\\Users\\VARUN_~1\\AppData\\Local\\Temp\\scoped_dir3812_29426}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d57.0.2987.133, platform\u003dXP, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dtrue, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue}]\nSession ID: f3d677960f930cea1ca83fff827ec7b3\n*** Element info: {Using\u003dcss selector, value\u003dinput[name\u003d\u0027login\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)\r\n\tat org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)\r\n\tat com.czeczotka.bdd.steps.loginScript.login(loginScript.java:42)\r\n\tat ✽.Then user enters Credentials to LogIn(cucumber/login.feature:7)\r\n",
-  "status": "failed"
+  "duration": 33734547212,
+  "status": "passed"
 });
 formatter.uri("cucumber/loginScenarioOutline.feature");
 formatter.feature({
@@ -388,14 +387,14 @@ formatter.match({
   "location": "loginScript.openURL()"
 });
 formatter.result({
-  "duration": 4624127896,
+  "duration": 523964621,
   "status": "passed"
 });
 formatter.match({
   "location": "loginScript.launchapplication()"
 });
 formatter.result({
-  "duration": 5973282853,
+  "duration": 4171773132,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -497,14 +496,14 @@ formatter.match({
   "location": "loginScript.entercredentails_ScenaioOutline(String,String)"
 });
 formatter.result({
-  "duration": 16497522937,
+  "duration": 17241044356,
   "status": "passed"
 });
 formatter.match({
   "location": "loginScript.validateUserLoginsSuccessfully()"
 });
 formatter.result({
-  "duration": 21922896,
+  "duration": 13637733,
   "status": "passed"
 });
 formatter.scenario({
@@ -549,14 +548,14 @@ formatter.match({
   "location": "loginScript.entercredentails_ScenaioOutline(String,String)"
 });
 formatter.result({
-  "duration": 16539747880,
+  "duration": 14898421876,
   "status": "passed"
 });
 formatter.match({
   "location": "loginScript.validateUserLoginsSuccessfully()"
 });
 formatter.result({
-  "duration": 14682766,
+  "duration": 9296205,
   "status": "passed"
 });
 formatter.uri("cucumber/registration.feature");
@@ -686,14 +685,14 @@ formatter.match({
   "location": "registration.getRegistrationPage()"
 });
 formatter.result({
-  "duration": 31032025760,
+  "duration": 3836289834,
   "status": "passed"
 });
 formatter.match({
   "location": "registration.registerUser(DataTable)"
 });
 formatter.result({
-  "duration": 4379878827,
+  "duration": 3003545156,
   "status": "passed"
 });
 formatter.match({
@@ -706,7 +705,7 @@ formatter.match({
   "location": "registration.registrationSuccessful(String)"
 });
 formatter.result({
-  "duration": 164630936,
+  "duration": 97111360,
   "status": "passed"
 });
 });

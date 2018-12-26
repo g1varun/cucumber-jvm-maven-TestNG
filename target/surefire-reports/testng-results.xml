@@ -1,11 +1,203 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="0" passed="0">
+<testng-results skipped="0" failed="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Command line suite" duration-ms="4" started-at="2017-04-17T15:36:03Z" finished-at="2017-04-17T15:36:03Z">
+  <suite name="Suite" duration-ms="574" started-at="2018-12-16T08:21:32Z" finished-at="2018-12-16T08:21:33Z">
     <groups>
+      <group name="cucumber">
+        <method signature="RunTest.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.czeczotka.bdd.runner.RunTest@735f7ae5]" name="feature" class="com.czeczotka.bdd.runner.RunTest"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test name="Command line test" duration-ms="4" started-at="2017-04-17T15:36:03Z" finished-at="2017-04-17T15:36:03Z">
-    </test> <!-- Command line test -->
-  </suite> <!-- Command line suite -->
+    <test name="Test" duration-ms="574" started-at="2018-12-16T08:21:32Z" finished-at="2018-12-16T08:21:33Z">
+      <class name="com.czeczotka.bdd.runner.RunTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.czeczotka.bdd.runner.RunTest@735f7ae5]" name="setUpClass" is-config="true" duration-ms="214" started-at="2018-12-16T13:51:32Z" finished-at="2018-12-16T13:51:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.czeczotka.bdd.runner.RunTest@735f7ae5]" name="feature" duration-ms="155" started-at="2018-12-16T13:51:33Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-12-16T13:51:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[This is working examples]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.czeczotka.bdd.runner.RunTest@735f7ae5]" name="feature" duration-ms="9" started-at="2018-12-16T13:51:33Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-12-16T13:51:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Login feature of mercury website.]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.czeczotka.bdd.runner.RunTest.feature(RunTest.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.NullPointerException
+	at java.util.Hashtable.put(Hashtable.java:460)
+	at java.util.Properties.setProperty(Properties.java:166)
+	at java.lang.System.setProperty(System.java:796)
+	at com.czeczotka.bdd.steps.Hook.openBrowser(Hook.java:15)
+	at com.czeczotka.bdd.steps.loginScript.openURL(loginScript.java:20)
+	at ✽.Given user launch browser(cucumber/login.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.czeczotka.bdd.runner.RunTest@735f7ae5]" name="feature" duration-ms="21" started-at="2018-12-16T13:51:33Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-12-16T13:51:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Login feature of mercury website.]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.czeczotka.bdd.runner.RunTest.feature(RunTest.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.NullPointerException
+	at java.util.Hashtable.put(Hashtable.java:460)
+	at java.util.Properties.setProperty(Properties.java:166)
+	at java.lang.System.setProperty(System.java:796)
+	at com.czeczotka.bdd.steps.Hook.openBrowser(Hook.java:15)
+	at com.czeczotka.bdd.steps.loginScript.openURL(loginScript.java:20)
+	at ✽.Given user launch browser(cucumber/loginScenarioOutline.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="FAIL" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.czeczotka.bdd.runner.RunTest@735f7ae5]" name="feature" duration-ms="12" started-at="2018-12-16T13:51:33Z" description="Runs Cucumber Feature" data-provider="features" finished-at="2018-12-16T13:51:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Register a new user]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[java.lang.NullPointerException]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.czeczotka.bdd.runner.RunTest.feature(RunTest.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:659)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:845)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1153)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1199)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1124)
+	at org.testng.TestNG.run(TestNG.java:1032)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.NullPointerException
+	at java.util.Hashtable.put(Hashtable.java:460)
+	at java.util.Properties.setProperty(Properties.java:166)
+	at java.lang.System.setProperty(System.java:796)
+	at com.czeczotka.bdd.steps.Hook.openBrowser(Hook.java:15)
+	at com.czeczotka.bdd.steps.registration.getRegistrationPage(registration.java:24)
+	at ✽.Given Im on registration page(cucumber/registration.feature:5)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.czeczotka.bdd.runner.RunTest@735f7ae5]" name="tearDownClass" is-config="true" duration-ms="71" started-at="2018-12-16T13:51:33Z" finished-at="2018-12-16T13:51:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.czeczotka.bdd.runner.RunTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
 
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
@@ -11,8 +13,12 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class registration {
-
 	
+/*	public registration(WebDriver driver) {
+		super(driver);
+	}*/
+
+	@Test
 	@Given("^Im on registration page$")
 	public void getRegistrationPage(){
 		Hook.openBrowser();

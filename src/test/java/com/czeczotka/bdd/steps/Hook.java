@@ -12,7 +12,8 @@ public class Hook {
 	}
 
 	public static void openBrowser(){
-		System.setProperty("webdriver.chrome.driver", "C:/Wiki/chromedriver/chromedriver.exe");
+		String Path = System.getProperty("user.dir")+"/browser/chromedriver";
+		System.setProperty("webdriver.chrome.driver", Path);
 		driver = new ChromeDriver();
 		
 	}
