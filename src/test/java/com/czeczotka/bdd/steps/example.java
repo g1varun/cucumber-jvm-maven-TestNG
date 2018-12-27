@@ -18,6 +18,7 @@ public class example {
 
 	private List<Integer> numbers;
 	private int sum;
+	//private int sum1;
 	
 	private Map<String, Integer> priceList;
 	private int totalSum;
