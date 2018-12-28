@@ -23,9 +23,9 @@ import cucumber.api.junit.Cucumber;
         glue = "com.czeczotka.bdd.steps",
         //tags={"@smoketest"},
         features= {"classpath:cucumber/example.feature",
-        		   "classpath:cucumber/registration.feature",
+        		 /*  "classpath:cucumber/registration.feature",
         		   "classpath:cucumber/login.feature",
-        		   "classpath:cucumber/loginScenarioOutline.feature"}
+        		   "classpath:cucumber/loginScenarioOutline.feature"*/}
         
         //features = {"classpath:cucumber/registration.feature"}
         

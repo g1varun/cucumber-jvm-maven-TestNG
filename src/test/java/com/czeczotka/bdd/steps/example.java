@@ -1,24 +1,17 @@
 package com.czeczotka.bdd.steps;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-
 import org.testng.Assert;
-import org.testng.annotations.Test;
-
-import cucumber.api.DataTable;
+import com.czeczotka.bdd.calculator.OrderItem;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-@Test
 public class example {
 
 	private List<Integer> numbers;
 	private int sum;
-	//private int sum1;
 	
 	private Map<String, Integer> priceList;
 	private int totalSum;
@@ -27,25 +20,28 @@ public class example {
 	private List<OrderItem> list;
 	int purchasecost=0;
 	
-	
-	@Given("^I have a cucumber step$")
+	@Given("I have a cucumber step$")
 	public void displayReports(){
 		System.out.println("Display Reports...");
 	}
 	
-	@Given("^a list of numbers")
+	@Given("^a list of numbers$")
 	public void calculate(List<Integer> num) throws Throwable
 	{
 		this.numbers = num;
 		for (Integer in : numbers){
 			sum = sum + in;
 		}
+		System.out.println("Sum of provided numbers..." + sum);
 	}
 	
 	@Then("^I should get (\\d+)$")
 	public void checksum(int expectedsum) throws Throwable{
 		if(expectedsum==sum){
-			System.out.println("Good, sum of value is matching.");
+			Assert.assertEquals(sum, expectedsum, "Good, sum of value is matching.");
+		}
+		else {
+			Assert.fail("Failed, sum of value is not matching.");
 		}
 	}	
 	
@@ -60,13 +56,16 @@ public class example {
 		int Item2nd = priceList.get(secondItem);
 		totalSum += Item1st * costOf1stItem;
 		totalSum += Item2nd * costOf2ndItem;
-		System.out.println("Total Cost.. " + totalSum);
+		//System.out.println("Total Cost.. " + totalSum);
 	}
 	
 	@Then("^should I pay (\\d+)$")
 	public void paymentDone(int paidAmount) throws Throwable{ 
 		if (paidAmount == totalSum){
-			System.out.println("Payment is equal");
+			Assert.assertEquals(totalSum, paidAmount, "Payment is equal");
+		}
+		else {
+			Assert.fail("Failed,Payment is not equal");
 		}
 	}
 	

@@ -6,10 +6,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Hook {
 
 	public static WebDriver driver;
-	
-	public Hook(WebDriver driver) {
-		Hook.driver = driver;
-	}
 
 	public static void openBrowser(){
 		String Path = System.getProperty("user.dir")+"/browser/chromedriver";
